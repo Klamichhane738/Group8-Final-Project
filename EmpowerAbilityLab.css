@@ -1,0 +1,548 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background for contrast */
+}
+
+/* Header and Navigation Styling */
+header {
+    background-color: #f37575;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+}
+
+header img {
+    width: 150px;
+}
+header .logo-text {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+}
+
+nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #fbbd8d, #fc8c8c); /* Improved gradient for better contrast */
+    padding: 10px 20px; /* Padding for spacing */
+    border-radius: 50px; /* Capsule-shaped navbar */
+    box-shadow: 0 4px 10px rgba(56, 40, 132, 0.2); /* Subtle shadow for depth */
+    z-index: 1000;
+    font-weight: bold;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px; /* Increased gap between menu items */
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: rgb(7, 7, 7);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+
+}
+
+nav ul li a:focus {
+    font-weight: bold;
+    box-shadow: 0 0 5px green;
+}
+
+/* Ensure logo stays on the left */
+.navbar-brand {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Main content section */
+#mainContent {
+    padding: 20px;
+}
+
+/* Modal Styling */
+#communityModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: rgba(194, 43, 43, 0.849);
+    width: 80%;
+    max-width: 600px;
+}
+
+#communityModal .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #f37575;
+    color: rgb(7, 7, 7);
+    text-align: center;
+    padding: 10px;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #f37575;
+    color: rgb(7, 7, 7);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+button:focus {
+    font-weight: bold;
+    outline: none; /* Optional: Removes default focus outline if not needed */
+    border: 2px solid green;
+    box-shadow: 0 0 5px green;
+}
+
+button:hover {
+    background-color: #d4543e;
+}
+
+
+/* Table Styling inside Modal */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+a {
+    color: #0144fc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form and Images */
+.contact-container {
+    display: flex;
+    gap: 10px;
+}
+
+#contactForm {
+    flex-grow: 1;
+    max-width: 70%;
+}
+
+.schedule-image {
+    width: 100px;
+    height: auto;
+}
+
+/* Services Section */
+.services-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.services-image {
+    width: 50px;
+    height: auto;
+}
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.services-text {
+    flex-grow: 1;
+    max-width: 70%;
+}
+
+/* Schedule a Call Section */
+.schedule-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.schedule-image {
+    width: 50px;
+    height: auto;
+}
+
+
+/* Form Elements */
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 1rem;
+    border: 1px solid #020202;
+    border-radius: 4px;
+}
+
+form button[type="submit"] {
+    background-color: #f37575;
+    color: rgb(18, 18, 18);
+    padding: 10px 20px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+form button[type="submit"]:focus {
+    outline: none; /* Removes default focus outline */
+    border: 2px solid green; /* Adds a green border on focus */
+    box-shadow: 0 0 5px green; /* Optional: Adds a subtle green glow */
+}
+
+
+form button[type="submit"]:hover {
+    background-color: #d4543e;
+}
+
+/* Modal Close Button */
+#closeModal {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#closeModal:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .services-header, .schedule-header {        
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .services-image, .schedule-image {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .services-container {
+        margin-top: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav {
+        position: relative;
+        left: 0;
+        transform: none;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .navbar-brand {
+        align-self: flex-start;
+    }
+
+    header img {
+        margin-bottom: 10px;
+    }
+}
+
+*:focus {
+    outline: 2px solid #28a745; /* Green outline */
+    outline-offset: 2px;
+  }
+
+/* Label Styling */
+label {
+    display: inline-block;
+    cursor: pointer; /* Make label clickable */
+    margin-bottom: 10px; /* Space below each label */
+    vertical-align: middle; /* Align text vertically with checkbox */
+}
+
+/* Ensure checkbox and text are inline */
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    cursor: pointer;
+}
+
+.checkbox-group label {
+    margin: 0;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+
+/* The switch - the box around the slider */
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 32px;
+}
+
+/* Hide default checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: .4s;
+    z-index: 1; /* Ensure slider is above the base layer */
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 23px;
+    width: 23px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgb(190, 48, 26);
+    border-radius: 50%;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+/* Improved focus styles */
+input:focus-visible + .slider {
+    /* Remove previous outline styles */
+    outline: none;
+    /* Add a visible focus ring that appears above the slider */
+    box-shadow: 0 0 0 3px #28a745;
+    /* Ensure the focus indicator is visible */
+    z-index: 2;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 32px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Switch container styling */
+.switch-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+  /* Additional styling for text and instruction */
+  .text {
+    margin-left: 10px; /* Adjust margin as needed */
+  }
+  
+  .instruction {
+    font-size: 12px; /* Adjust font size as needed */
+    color: #888;
+    margin-top: 5px;
+  }
+/* Skip Link Styling */
+.skip-nav {
+    position: absolute;
+    top: -40px; /* Hides it above the viewport initially */
+    left: 200px;
+    background-color: #1e1d1d; /* Dark background */
+    color: #ebe4e4; /* White text for contrast */
+    padding: 7px 15px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    z-index: 1000; /* Ensures it appears above other elements */
+    transition: top 0.3s ease; /* Smooth transition for visibility */
+}
+
+.skip-nav:focus {
+    top: 10px; /* Moves it into the viewport when focused */
+    outline: 2px solid #42cd2c; /* White outline for visibility */
+    outline-offset: 2px;
+}
+/* Toggle Switch Container */
+.switch-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Hide default checkbox */
+.toggle-input {
+    opacity: 0;
+    position: absolute;
+}
+
+/* Switch container */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 32px;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+/* Slider circle */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* Slider movement on toggle */
+.toggle-input:checked + .slider {
+    background-color: #b34b4b; /* Background when checked */
+}
+
+.toggle-input:checked + .slider:before {
+    transform: translateX(26px); /* Moves the circle to the right */
+}
+
+/* Rounded switch */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Descriptive text */
+.text {
+    font-size: 1rem;
+    color: #333;
+}
+.three-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adjust spacing between columns */
+}
+
+.column {
+    flex: 1; /* Make all columns equal width */
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+.column h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.column p {
+    margin: 0;
+    text-align: justify;
+}
+.visually-hidden{
+    display: none;
+    opacity: 0.0;
+}

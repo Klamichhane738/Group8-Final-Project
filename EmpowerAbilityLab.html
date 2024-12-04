@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Accessible digital experiences for all.">
+    <title>Empower Ability Labs</title>
+    <link rel="stylesheet" href="EmpowerAbilityLab.css">
+</head>
+<body>
+
+    <!-- Accessibility Improvement: Added Skip Link -->
+    
+    <a href="#mainContent" class="skip-nav">Skip to main content</a>
+    <!-- Header -->
+    <header class="navbar navbar-expand-md navbar-dark bg-dark" role="banner">
+        <a class="navbar-brand" href="#home" aria-label="Home">
+            <img src="images/empowerabilitylabslogo.png" alt="Empower Ability Labs Logo" width="150">
+        </a>
+        <nav role="navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#home" aria-label="Go to Home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services" aria-label="View Services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" aria-label="Schedule a Call">Schedule a Call</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+    </header>
+
+    <!-- Main Content -->
+    <main id="mainContent" role="main">
+        <!-- Home Section -->
+        <section id="home" tabindex="-1">
+            <h1>Welcome to Empower Ability Labs!</h1>
+            <p>
+                Empower Ability Labs is a hub for learning and empathy-building.  We are on a mission to foster understanding and promote inclusive digital experiences for all. We offer a range of services designed to promote accessibility awareness, drive inclusivity, and enhance the user experience. And help you find answers on How do people with disabilities use technology and navigate the digital world? What tools do they employ? 
+            </p>
+           <!-- Updated Meet the Empower Community Button -->
+<button id="communityBtn" aria-haspopup="dialog" aria-controls="communityModal" aria-expanded="false">Meet the Empower Community</button>
+
+<!-- Original Content Moved Below the Button -->
+<!-- Updated Content in 3 Columns without Table Structure -->
+<div id="communityAdditionalContent" class="three-columns">
+    <!-- Column 1: Our Approach -->
+    <div class="column">
+        <h2>Our Approach</h2>
+        <p>
+            Empower Ability Labs utilizes a hands-on approach to raise awareness and promote empathy. Our immersive workshops and lab days provide participants with a unique opportunity to step into the shoes of individuals with disabilities and navigate the world from their perspective. 
+            <a href="https://www.google.com/search/howsearchworks/our-approach/" target="_blank" rel="noopener noreferrer" aria-label="Learn more about Our Approach">Learn more</a>
+        </p>
+    </div>
+
+    <!-- Column 2: Services -->
+    <div class="column">
+        <h2>Services</h2>
+        <p>
+            Promote accessibility awareness and enhance the user experience. 
+            <ul>
+                <li>Empathy lab days and workshops.</li>
+                <li>Go beyond WCAG compliance!</li>
+                <li>Inspirational speakers.</li>
+            </ul>
+            <a href="https://www.elevenways.be/en/services" target="_blank" rel="noopener noreferrer" aria-label="Learn more about Services">Learn more</a>
+        </p>
+    </div>
+
+    <!-- Column 3: Testimonials -->
+    <div class="column">
+        <h2>Testimonials</h2>
+        <p>
+            Invite a speaker with disabilities to share their unique journey. This captivating addition to your upcoming event will offer insights that resonate,  inspire, educate, and enrich your team’s understanding of inclusion.
+            <a href="https://dictionary.cambridge.org/us/dictionary/english/testimonial" target="_blank" rel="noopener noreferrer" aria-label="Learn more about Testimonials">Learn more</a>
+        </p>
+    </div>
+</div>
+
+
+<!-- Modal Content for the Steering Committee -->
+<div id="communityModal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true" class="modal-overlay">
+    <div class="modal-content">
+        <h2 id="modalTitle">Community Steering Committee</h2>
+        <p>We get aha! moments from product managers who try our services for the first time. We offered many lab days, workshops, and usability testing services to many companies and organizations including:</p>
+        <ul>
+            <li>McGill University</li>
+            <li>Walmart.ca</li>
+            <li>Apple.ca</li>
+            <li>Google.ca</li>
+            <li>Government of Canada</li>
+        </ul>
+        <button id="closeModal" aria-label="Close Modal">Close</button>
+    </div>
+</div>
+
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" tabindex="-1">
+            <div class="services-header">
+                <h2>Our Services</h2>
+                <!-- Services Image next to the heading -->
+                <img src="images/services.png" alt="Services overview image" class="services-image">
+            </div>
+            
+            <p>Dedicated space or programs designed to cultivate empathy and understanding among individuals towards the challenges faced by people with disabilities in using technology and interacting with various environments.</p>
+            <div class="services-container">
+                <!-- Services Text -->
+                <div class="services-text">
+                        <h3>Empathy Lab days and workshops</h3> 
+                         <p>The lab days and workshops typically provide hands-on experiences, simulations, and interactions with assistive technologies, tools, and scenarios that replicate the obstacles individuals with disabilities encounter daily.</p>  
+                        <h3>Inspirational speakers</h3> 
+                         <p>Invite a speaker with disabilities to take share their unique journey. This captivating addition to your upcoming event will offer insights that resonate, inspire, educate, and enrich your team collective understanding of inclusion. </p>  
+                        <h3>Usability testing</h3> 
+                         <p>Go beyond WCAG! Involve individuals with disabilities in usability testing to gather valuable insights for refining product strategy and identifying accessibility concerns at an early stage when solutions are more feasible and cost-effective. You have access to a diverse community of people with disabilities, who use various assistive technologies. With technical expertise ranging from novice to expert, our community can support your product lifecycle from user research, to design, to QA.</p>     
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule a Call Section -->
+<section id="contact" tabindex="-1">
+    <div class="schedule-header">
+        <h2>Schedule a Call</h2>
+        <img src="images/scheduleacall.png" alt="" role="presentation" class="schedule-image">
+    </div>
+    
+    <p>We'd love to connect with you! Complete the form below to schedule a consultation.</p>
+    
+    <form id="contactForm" novalidate aria-label="Contact form">
+        <div class="form-group">
+            <label for="businessName">Business Name</label>
+            <input 
+                type="text" 
+                id="businessName" 
+                name="businessName" 
+                aria-describedby="businessNameError businessNameHelp">
+            <span id="businessNameHelp" class="help-text">Enter the name of your business</span>
+            <span id="businessNameError" class="error-message" role="alert" hidden>Please enter your business name</span>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input 
+                type="tel" 
+                id="phone" 
+                name="phone" 
+                aria-describedby="phoneError phoneFormat"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+            <span id="phoneFormat" class="help-text">Format: 613-123-1234</span>
+            <span id="phoneError" class="error-message" role="alert" hidden>Please enter a valid phone number</span>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                aria-required="true"
+                aria-describedby="emailError"
+                required>
+            <span id="emailError" class="error-message" role="alert" hidden>Please enter a valid email address</span>
+        </div>
+
+        <fieldset>
+            <legend>Areas of Interest</legend>
+            <div class="checkbox-group">
+                <input type="checkbox" id="workshops" name="topic" value="workshops">
+                <label for="workshops">Awareness lab days and workshops</label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="speakers" name="topic" value="speakers">
+                <label for="speakers">Invite a speaker with disabilities to your event</label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="testing" name="topic" value="testing">
+                <label for="testing">Usability Testing</label>
+            </div>
+        </fieldset>
+
+        <div id="eventDetails" hidden>
+            <label for="eventDescription">Event Details</label>
+            <textarea 
+                id="eventDescription" 
+                name="eventDescription"
+                aria-describedby="eventDescriptionHelp"
+                rows="4"></textarea>
+            <span id="eventDescriptionHelp" class="help-text">Please provide details about your event, including date, audience size, and any specific requirements.</span>
+        </div>
+
+        <div class="form-group">
+            <div class="switch-container" role="group" aria-labelledby="switchDescription">
+                <!-- Label directly associates with the input, and descriptive content is added -->
+                <label class="switch" for="specificSlider">
+                    <span class="visually-hidden">subscribe</span>
+                    <input 
+                        type="checkbox" 
+                        id="specificSlider"
+                        aria-label="switchDescription">
+                    <span class="slider round"></span>
+                    
+                </label>
+                <!-- Ensure this span contains meaningful descriptive text -->
+                <span id="switchDescription" class="text">Toggle to subscribe or unsubscribe to email updates.</span>
+            </div>
+        </div>
+        
+              
+        <button 
+            type="submit" aria-describedby="submitHelp"
+            >Schedule a Call</button>
+       <span id="submitHelp" class="help-text" hidden>Press Enter to submit the form</span> 
+        <div id="statusMessage" class="status-message" aria-live="polite" role="status"></div>
+    </form>
+</section>
+   
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <p>© Copyright Empower Ability Labs 2023. All rights reserved.</p>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="EmpowerAbilityLab.js"></script>
+</body>
+</html>
