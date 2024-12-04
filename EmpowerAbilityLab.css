@@ -166,7 +166,7 @@ a:hover {
 }
 
 .schedule-image {
-    width: 100px;
+    width:25%;
     height: auto;
 }
 
@@ -257,30 +257,16 @@ form button[type="submit"]:hover {
 }
 
 /* Responsive Design for Mobile */
+/* Responsive Design for Tablet and Small Screens */
+
+
+/* Responsive Design for Mobile */
 @media (max-width: 768px) {
-    .services-header, .schedule-header {        
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .services-image, .schedule-image {
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .contact-container {
-        flex-direction: column;
-    }
-
-    .services-container {
-        margin-top: 10px;
-    }
-
     header {
         flex-direction: column;
         align-items: center;
     }
-    
+
     nav {
         position: relative;
         left: 0;
@@ -289,14 +275,61 @@ form button[type="submit"]:hover {
         margin-top: 15px;
     }
 
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
     .navbar-brand {
-        align-self: flex-start;
+        align-self: center;
     }
 
     header img {
         margin-bottom: 10px;
     }
+
+    .three-columns {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .column {
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: left;
+    }
+
+    .services-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .services-text {
+        max-width: 100%;
+    }
+
+    .services-header,
+    .schedule-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .services-image,
+    .schedule-image{
+        width: 10%;
+        margin-bottom: 10px;
+    }
+
+    #contactForm {
+        max-width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
 }
+
+
 
 *:focus {
     outline: 2px solid #28a745; /* Green outline */
@@ -546,3 +579,73 @@ input:checked + .slider:before {
     display: none;
     opacity: 0.0;
 }
+/* Hamburger Button */
+.hamburger {
+    display: none; /* Show the hamburger icon */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30px; /* Set the width of the hamburger */
+    height: 24px; /* Set the height of the hamburger */
+    background: none; /* Remove background color */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    z-index: 1001; /* Ensure it's above other elements */
+    padding: 0;
+}
+
+.hamburger-bar {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu.hidden {
+    display: none; /* Hide menu */
+}
+
+.nav-menu.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    left: 0;
+    width: 100%;
+    background-color: #d4cdcd;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Show hamburger icon on small screens */
+    }
+
+    .nav-menu {
+        display: none; /* Hide menu by default */
+    }
+
+    .nav-menu.open {
+        display: flex; /* Show menu when toggled */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #f4f4f4;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+}
+

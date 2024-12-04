@@ -155,3 +155,13 @@ form.addEventListener('submit', (e) => {
 // Optional: Email format validation
 // Get the email input field
 // Get the email input field
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", () => {
+        const isExpanded = hamburger.getAttribute("aria-expanded") === "true";
+        hamburger.setAttribute("aria-expanded", !isExpanded);
+        navMenu.classList.toggle("open");
+    });
+});
